@@ -112,9 +112,9 @@ class TickWriter:
         """
         return {
             "<TICKER>": tick.ticker,
-            "<DATE>": tick.dt.strftime("%m/%d/%Y"),
-            "<TIME>": tick.dt.strftime("%H:%M:%S"),
-            "<MSEC>": tick.dt.strftime("%f"[:]),
+            "<DATE>": tick.dt.strftime("%Y%m%d"),
+            "<TIME>": tick.dt.strftime("%H%M%S"),
+            "<MSEC>": tick.dt.strftime("%f")[:3],
             "<LAST>": tick.last,
             "<BID>": tick.bid,
             "<ASK>": tick.ask,
